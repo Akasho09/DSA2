@@ -1,0 +1,25 @@
+# Ignore everything
+*
+
+# Don't ignore directories
+!*/
+
+# Include .cpp files
+!*.cpp
+!*.java
+
+
+# Include .md files
+!*.md
+!*.txt
+!*.yaml
+!*.asm
+!*.s
+!*.png
+!*.cpp
+!*.c 
+!*.gitignore
+
+
+tempCodeRunnerFile*.cpp 
+    
