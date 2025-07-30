@@ -45,3 +45,15 @@ In an array where every number appears twice except one:
 - Useful Trick: a ^ b ^ a = b (because a ^ a = 0 and 0 ^ b = b)
 
 - a^(a+1)=1
+
+- num & -num = 
+extracts the rightmost set bit (the least significant bit that is 1) in the binary representation of num.
+```c
+ num = 18  → binary:  10010
+-num = -18 → binary: 01110 (2's complement)
+
+  10010
+& 01110
+= 00010 → 2
+```
+
