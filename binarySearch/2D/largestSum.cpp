@@ -1,7 +1,7 @@
-class Solution {
-public:
+#include <iostream>
+using namespace std;
 
-    bool possAns (vector<int>& nums, int k , int m){
+bool possAns (vector<int>& nums, int k , int m){
         int sum=0;
         int count = 1;
         for(int i=0;i<nums.size();i++){
@@ -35,4 +35,12 @@ public:
         
         return ans ;
     }
-};
+
+    
+
+
+int main (){
+
+
+    
+}
