@@ -2,24 +2,28 @@
 #include <iostream>
 using namespace std;
 
+class Solution {
+public:
     void helper(int n , vector<vector<string>>&ans ,vector<string>v , int ind){
-        cout <<ind <<endl;
         if(ind==n){
+            for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+            if(v[i][j]=='-')v[i][j]='.';
+            }
+            }
             ans.push_back(v); return ;
         }
        for(int i=0;i<n;i++){
-        cout <<ind <<endl;
         if(v[i][ind]=='-'){ 
-        cout <<" " <<ind <<endl;
             vector<string>temp = v;
-            v[ind][i]='Q';
+            v[i][ind]='Q';
             int t1 = ind ;
             int t2 = i ;
-            while(ind<n && i>=0 ) v[i--][ind++]='.';
+            while(ind<n-1 && i>0 ) v[--i][++ind]='.';
             i=t2 ; ind = t1 ;
-            while(ind<n) v[i][ind++]='.';
+            while(ind<n-1) v[i][++ind]='.';
             i=t2 ; ind = t1 ;
-            while(i<n && ind<n ) v[i++][ind++]='.';
+            while(i<n-1 && ind<n-1 ) v[++i][++ind]='.';
             i=t2 ; ind = t1 ;
             helper(n , ans , v , ind+1);
             v=temp;
@@ -34,9 +38,10 @@ using namespace std;
        return ans ;
     }
 
+};
 
-    class Solution {
-public:
+
+ 
     bool isSafe(int row, int col, vector<string>& board, int n) {
         // Check column
         for (int i = 0; i < row; i++)
@@ -76,7 +81,7 @@ public:
         helper(0, n, ans, board);
         return ans;
     }
-};
+
 
 int main (){
 

@@ -1,5 +1,3 @@
-
-
 ## 🧠 What is XOR?
 XOR stands for exclusive OR.
 
@@ -56,4 +54,7 @@ extracts the rightmost set bit (the least significant bit that is 1) in the bina
 & 01110
 = 00010 → 2
 ```
+
+- n & (n - 1) is a bit manipulation trick that removes the rightmost set bit from n.
+
 
