@@ -58,3 +58,5 @@ extracts the rightmost set bit (the least significant bit that is 1) in the bina
 - n & (n - 1) is a bit manipulation trick that removes the rightmost set bit from n.
 
 
+- ans= ans | (1<<i); 
+to set ith bit 
