@@ -22,3 +22,21 @@ public:
         return {a,b};
     }
 };
+
+
+class Solution {
+public:
+    vector<int> singleNumber(vector<int>& nums) {
+        long x = 0;
+        for(int i=0;i<nums.size();i++) x^=nums[i];
+
+        x = x&(-x); 
+        int a=0 , b=0 ;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]&x) a^=nums[i];
+            else b^=nums[i];
+        }
+
+        return {a,b};
+    }
+};
