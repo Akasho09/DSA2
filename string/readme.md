@@ -24,3 +24,6 @@ n: Number of characters to match.
 | Best case    | O(1)       |
 | Average case | O(n)       |
 | Worst case   | O(n²)      |
+
+
+// ALGOS 
