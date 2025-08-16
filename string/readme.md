@@ -27,3 +27,18 @@ n: Number of characters to match.
 
 
 // ALGOS 
+🔹 1. String Matching / Pattern Searching Algorithms
+
+Used to find if a pattern exists inside a text.
+
+Naïve Pattern Searching – O(n·m)
+
+Rabin-Karp Algorithm – Uses hashing, O(n + m) average
+
+Knuth-Morris-Pratt (KMP) Algorithm – Prefix function (LPS array), O(n + m)
+
+Boyer-Moore Algorithm – Uses bad character & good suffix heuristics, O(n/m)
+
+Z-Algorithm – Pattern matching using Z-array, O(n + m)
+
+Finite Automata Pattern Matching – Preprocessing pattern into automaton

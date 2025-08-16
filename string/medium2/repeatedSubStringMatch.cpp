@@ -9,6 +9,39 @@ int main (){
 
 }
 
+// robin karp 2 with errors
+
+    #define mult 26
+    #define q 101
+    int repeatedStringMatch(string a, string b) {
+        int n = a.size() , m = b.size();
+        int aHash = 0 , bHash = 0 ;
+        int minuser =1 ;
+        for(int i=0;i<n;i++){
+            aHash= (aHash*mult+(a[i]-'a')) % q ;
+            bHash= (bHash*mult+(b[i]-'a')) % q ;
+            if(i>0) minuser=(minuser*mult)%q;
+        }
+
+        int ans = -1;
+        for(int i=0;i<n;i++){
+            if(aHash==bHash && a[i]==b[0]){
+                int ind = i+1 ;
+                int count = 1; int j=1 ; 
+                for(;j<m;j++){
+                    if(ind==0) count++;
+                    if(a[ind]!=b[i]) break;
+                    ind++;
+                    if(ind==n) ind = 0;
+                }
+                if(j==m) return count;
+            }
+            if(i<n-1) aHash= (mult*(aHash-(minuser*(a[i]-'a')))+(a[i]-'a')) % q;
+        }
+
+
+        return -1; 
+    }
 
 // idiotic robin karp
     int repeatedStringMatch3(string a, string b) {
